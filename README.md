@@ -24,5 +24,11 @@ Finally, Power BI was the key tool in creation of an analytical dashboard.
 
 ### Building the Dataset
 
-As explained in the overview, the dataset consisted of two tables with separate, 3-cycle data tables. To begin, I created a fresh .xlsx Excel workbook and performed 'Data (tab)' > 'import from Excel' from both spreadsheets into separate tabs of my new workbook. After checking to see if both tables' columns were in the same exact order, I manually appended the newest survey data to the oldest and deleted the old sheet in the workbook. Once one sheet remained, I renamed the tab.
+As explained in the overview, the dataset consisted of two tables with separate, 3-cycle data tables. To begin, I created a fresh .xlsx Excel workbook and performed 'Data (tab)' > 'import from Excel' from both spreadsheets into separate tabs of my new workbook. After checking to see if both tables' columns were in the same exact order, I manually appended the newest survey data to the oldest and deleted the old sheet in the workbook. Once one sheet remained, I renamed the tab. Both original tables were archived safely in a protected company SharePoint folder.
 
+## Excel Cleaning Process
+
+1. The first order of business, before I could move into my Power BI/Power Query workspace, was to transform my 'working as a licensed teacher column'. The values were in a binary 0/1 system, which would not be very helpful in my workspace and would be much quicker to fix in a spreadsheet instance. I did two 'replace values' to change my 1's to "Employed as Teacher" and my 0's to "Not Employed as Teacher."
+2. For respondents who did not complete the whole survey, null values existed. Used another 'replace values' to change null values to "Unknown.
+3. At the request of the state, 'race' and 'ethnicity' data should be reported as one. With two existing columns for each separate data point, I used a concatenate function to bring them together.
+4. Highlight the entire table and used 'trim' tool. I want to make sure Power BI/Power Query only had (null) and no (blank) values. They are not the same and will negatively affect visualizations.
