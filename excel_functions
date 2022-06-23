@@ -1,8 +1,15 @@
-# used VLOOKUP to join missing data from my internal report
+# used VLOOKUP to join missing data from my internal report, the IF function is to return null if the cell is null
 # I am only including one VLOOKUP due to the code just being too repetitive to be valuable
+# Each VLOOKUP was autofilled down
 
-=VLOOKUP(
-  B5,Sheet1!$B$2:$C$162,
-  2,
-  FALSE
+=IF(
+  VLOOKUP(
+    B5,Sheet1!$B$2:$C$162,
+    2,
+    FALSE) = "",
+    "", 
+      VLOOKUP(
+        B5,Sheet1!$B$2:$C$162,
+        2,
+        FALSE)  
 )
