@@ -1,0 +1,5 @@
+# concatenated two cells with comma-space delimiter, autofilled the rest of the way down the spreadsheet.
+
+CONCAT(
+  R2, ", ", S2
+)
