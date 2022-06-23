@@ -30,11 +30,20 @@ As explained in the overview, the dataset consisted of two tables with separate,
 2. After checking to see if both tables' columns were in the same exact order, I manually appended the newest survey data to the oldest and deleted the old sheet in the workbook. 
 3. Once one sheet remained, I renamed the tab. Both original tables were archived safely in a protected company SharePoint folder.
 4. The dataset had some key data missing that was imperative for analysis: program codes, race, ethnicity, licensure areas for state licenses, and graduation dates. I ran an internal report for all active candidates from the beginning of 2016 to the end of 2021, and then exported that as a separate spreadsheet.
-5. I used the VLOOKUP function to fill in the aforementioned attributes using the 'student ID' as my primary key. (code in repository)
+6. I used the VLOOKUP function to fill in the aforementioned attributes using the 'student ID' as my primary key. (code in repository)
+7. Used 'copy' and 'paste as values' on each new column to make the data static values and non-function.
 
 ## Excel Cleaning Process
 
 1. The first order of business, before I could move into my Power BI/Power Query workspace, was to transform my 'working as a licensed teacher column'. The values were in a binary 0/1 system, which would not be very helpful in my workspace and would be much quicker to fix in a spreadsheet instance. I did two 'replace values' to change my 1's to "Employed as Teacher" and my 0's to "Not Employed as Teacher."
-2. For respondents who did not complete the whole survey, null values existed. Used another 'replace values' to change null values to "Unknown.
-3. At the request of the state, 'race' and 'ethnicity' data should be reported as one. With two existing columns for each separate data point, I used a concatenate function to bring them together. (Code in repository)
-4. Highlight the entire table and used 'trim' tool. I want to make sure Power BI/Power Query only had (null) and no (blank) values. They are not the same and will negatively affect visualizations.
+2. For respondents who did not complete the whole survey, null values existed. Used another 'replace values' to change null values to "Unknown."
+3. Performed 'copy' and 'pasted as values' to make data static and non-function.
+4. Fixed 'State(s) license' case to read 'State(s) License'
+5. Fixed long title 'Content state licensure subject' to 'Content Area'. (This is standard language for the state.)
+6. Highlight the entire table and used 'trim' tool. I want to make sure Power BI/Power Query only had (null) and no (blank) values. They are not the same and will negatively affect cleaning and visualizations.
+7. The file was prepared enough to store in our Power BI data repository at this point.
+
+## Power Query Cleaning Process
+
+1. Once the data was stored in the repository, I opened a fresh Power BI desktop instance, imported the data via Excel from the repository, and selected to transform the data.
+2. At the request of the state, 'race' and 'ethnicity' data should be reported as one. Used the 'merge field' tool to concatenate both columns using a "/" as a delimiter.
