@@ -1,0 +1,16 @@
+# concatenated two cells with comma-space delimiter, autofilled the rest of the way down the spreadsheet.
+
+=CONCAT(
+  R2,
+  ", ",
+  S2
+)
+
+# used VLOOKUP to join missing data from my internal report
+# I am only including one VLOOKUP due to the code just being too repetitive to be valuable
+
+=VLOOKUP(
+  B5,Sheet1!$B$2:$C$162,
+  2,
+  0
+)
