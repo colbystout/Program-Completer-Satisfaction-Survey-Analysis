@@ -70,3 +70,4 @@ As explained in the overview, the dataset consisted of two tables with separate,
 8. Earlier I created the "LikertSortOrder' column to organize the order of the legend/chart. I set 'Response' ordered by 'LikertSortOrder' to cleanly label everything best to worst.
 9. I created a benchmark constant line at 80%. (It is standard practice for my organization to KPI performance at 80%.)
    - Note: The goal is to have each question rate above 80% when aggregating 'Strongly Agree' and 'Agree' together. If the disagree responses go beyond 20%, the topic needs investigated.
+10. I renamed objects as appropriate, bordered, shadowed, aligned, and changed text to white.
