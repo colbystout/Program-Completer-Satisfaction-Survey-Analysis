@@ -1,0 +1,11 @@
+# DAX code creating a custom column that group grad dates into filterable sections of 9/1 to 8/31 of the next year
+# I used the SWITCH TRUE functions to accomplish an advanced logical expression
+
+Grad Year =
+    SWITCH(
+        TRUE(),
+        Completer_Satisfaction_Data[GradDate] >= DATE(2020, 8, 31), "20-21",
+        Completer_Satisfaction_Data[GradDate] >= DATE(2019, 8, 31), "19-20",
+        Completer_Satisfaction_Data[GradDate] >= DATE(2018, 8, 31), "18-19",
+        Completer_Satisfaction_Data[GradDate] <= DATE(2018, 9, 1), "17-18"
+)
