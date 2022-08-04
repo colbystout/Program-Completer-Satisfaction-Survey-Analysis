@@ -71,3 +71,29 @@ As explained in the overview, the dataset consisted of two tables with separate,
 9. I created a benchmark constant line at 80%. (It is standard practice for my organization to KPI performance at 80%.)
    - Note: The goal is to have each question rate above 80% when aggregating 'Strongly Agree' and 'Agree' together. If the disagree responses go beyond 20%, the topic needs investigated.
 10. I renamed objects as appropriate, bordered, shadowed, aligned, and changed text to white.
+
+## Analysis
+
+1. At first glance, the third response prompt is breaking the benchmark the worst. "I had a chance to voice my concerns to my instructor or supervising teacher."
+   - When operating the academic year slicers, this prompt has considerably trended downward since 17-18.
+2. The seventh prompt, "Integration of spirituality into my classes was beneficial to my learning," did tended to sit just below benchmark for each year, last academic year being the worst.
+   - This is a University non-negotiable, so even though we cannot remove spiritual topics in our courses, it is worth investigating.
+3. Several of the prompts mark some concern with classroom management and working with students with exceptionalities. (These exceptionalities can be learning-based or social/emotional/or socioeconomic.
+   - The State of Indiana has worked hard on adjusting standards to help universities meet these needs. We are already changing assessment instruments and modifying standard alignments to better assist students with exceptionalities.
+4. Our programs show to be very strong in teaching the ethical guidelines to the teaching profession, based on the ninth prompt.
+5. Early childhood candidates are less likely to fill out the survey.
+   
+## Recommendations
+
+1. Instructors must receive further training and greater expectation to hear concerns of students. We cannot control supervising teachers, but we can voice expectations to full-time instructors and adjuncts to hear student concerns and pass them on accordingly if necessary.
+2. Along this same issue, we need to streamline the avenues students have to voice concerns.
+3. We need to look at the frequency and applicability of spiritual matters in courses. If spiritual lessons are placed within discussion prompts, this might be a cause for investigation as many students dislike discussion prompts already as found in a previous analysis.
+4. Increase the amount of survey requests to early childhood candidates due to the lack of response rate.
+   - The early childhood programs are among our largest, and increasing the response rate for these programs would greatly increase the usability of the data.
+
+## (Data Requests)
+
+1. To make better use of this data, many null values need to be filled in. Only so much can be done with the completeness of survey data, but the lack of responses in the Content Area prompt greatly decreased the impact and usability of this data point.
+2. Add Student ID to the dataset. The survey is not anonymous, so being able to use this data point would allow me to join in many different attributes through our datawarehouse rather than relying on voluntary response.
+
+# Thank you for reading my analysis.
