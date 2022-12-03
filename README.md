@@ -58,7 +58,7 @@ As explained in the overview, the dataset consisted of two tables with separate,
 8. I realized my 'GradDate' column can in as 'text' type. This would be problematic for my plan to create a custom graduation academic year column/slicer. I changed the column type to 'Date'.
 9. This was everything I could find that needed cleaned, so I used 'close and apply' and went into my Power BI instance.
 
-## Power BI Dashboard Creation (See Dashboard PNG in Repository)
+## Power BI Dashboard Creation
 
 1. I started by centering the canvas and adding a background. The background is a simple, texture gradient in a gray hue. I am a big fan of dark themes.
 2. I added a card to the canvas, using 'student id' as the attribute and set it to 'Count (Distinct)'. This gave me the unique count of students contained in the data set: 161. I titled the card "Student Count" and removed "Distinct count of user id."
@@ -71,6 +71,8 @@ As explained in the overview, the dataset consisted of two tables with separate,
 9. I created a benchmark constant line at 80%. (It is standard practice for my organization to KPI performance at 80%.)
    - Note: The goal is to have each question rate above 80% when aggregating 'Strongly Agree' and 'Agree' together. If the disagree responses go beyond 20%, the topic needs investigated.
 10. I renamed objects as appropriate, bordered, shadowed, aligned, and changed text to white.
+
+![Dashboard_Pic](https://user-images.githubusercontent.com/103079066/205461891-eed85b23-caa0-46ef-bfd2-99ccebfab9bd.png)
 
 ## Analysis
 
